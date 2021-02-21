@@ -1,0 +1,16 @@
+﻿  voxel_engine.cpp
+D:\prjcts\voxel_engine\voxel_engine\Window.h(9,17): warning C4099: GLFWwindow: имя типа, ранее отображенное с помощью "struct", теперь отображено с помощью "class"
+D:\prjcts\voxel_engine\gllib\include\GLFW\glfw3.h(1157): message : см. объявление "GLFWwindow"
+  Window.cpp
+D:\prjcts\voxel_engine\voxel_engine\Window.h(9,17): warning C4099: GLFWwindow: имя типа, ранее отображенное с помощью "struct", теперь отображено с помощью "class"
+D:\prjcts\voxel_engine\gllib\include\GLFW\glfw3.h(1157): message : см. объявление "GLFWwindow"
+Window.obj : error LNK2001: неразрешенный внешний символ "_glfwSwapBuffers"
+Window.obj : error LNK2001: неразрешенный внешний символ "_glfwTerminate"
+Window.obj : error LNK2001: неразрешенный внешний символ "_glfwInit"
+Window.obj : error LNK2001: неразрешенный внешний символ "_glfwCreateWindow"
+Window.obj : error LNK2001: неразрешенный внешний символ "_glfwWindowHint"
+Window.obj : error LNK2001: неразрешенный внешний символ "_glfwMakeContextCurrent"
+Window.obj : error LNK2001: неразрешенный внешний символ "__imp__glewExperimental"
+Window.obj : error LNK2001: неразрешенный внешний символ "_glfwWindowShouldClose"
+Window.obj : error LNK2001: неразрешенный внешний символ "__imp__glewInit@0"
+D:\prjcts\voxel_engine\Release\voxel_engine.exe : fatal error LNK1120: неразрешенных внешних элементов: 9

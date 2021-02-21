@@ -1,0 +1,23 @@
+﻿  Events.cpp
+D:\prjcts\voxel_engine\voxel_engine\Window.h(10,17): warning C4099: GLFWwindow: имя типа, ранее отображенное с помощью "struct", теперь отображено с помощью "class"
+D:\prjcts\voxel_engine\gllib\include\GLFW\glfw3.h(1157): message : см. объявление "GLFWwindow"
+D:\prjcts\voxel_engine\voxel_engine\Events.cpp(20,37): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+D:\prjcts\voxel_engine\voxel_engine\Events.cpp(21,37): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+D:\prjcts\voxel_engine\voxel_engine\Events.cpp(27,14): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\prjcts\voxel_engine\voxel_engine\Events.cpp(28,14): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  Shader.cpp
+D:\prjcts\voxel_engine\voxel_engine\Shader.cpp(57,33): warning C4101: e: неиспользованная локальная переменная
+  Window.cpp
+D:\prjcts\voxel_engine\voxel_engine\Window.h(10,17): warning C4099: GLFWwindow: имя типа, ранее отображенное с помощью "struct", теперь отображено с помощью "class"
+D:\prjcts\voxel_engine\gllib\include\GLFW\glfw3.h(1157): message : см. объявление "GLFWwindow"
+  png_loader.cpp
+D:\prjcts\voxel_engine\voxel_engine\png_loader.cpp(60,52): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+  voxel_engine.cpp
+D:\prjcts\voxel_engine\voxel_engine\voxel_engine.cpp(1,20): error C2871: glm: пространство имен с таким именем не существует
+D:\prjcts\voxel_engine\voxel_engine\Window.h(10,17): warning C4099: GLFWwindow: имя типа, ранее отображенное с помощью "struct", теперь отображено с помощью "class"
+D:\prjcts\voxel_engine\gllib\include\GLFW\glfw3.h(1157): message : см. объявление "GLFWwindow"
+D:\prjcts\voxel_engine\voxel_engine\voxel_engine.cpp(31,2): error C2065: mat4: необъявленный идентификатор
+D:\prjcts\voxel_engine\voxel_engine\voxel_engine.cpp(31,7): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "matrix"
+D:\prjcts\voxel_engine\voxel_engine\voxel_engine.cpp(31,7): error C3861: matrix: идентификатор не найден
+D:\prjcts\voxel_engine\voxel_engine\voxel_engine.cpp(80,35): error C2065: matrix: необъявленный идентификатор
+  Создание кода...

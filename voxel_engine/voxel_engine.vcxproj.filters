@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="graphics">
+      <UniqueIdentifier>{887e6ea5-2bc0-45d8-846f-45b3b6b1c476}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="window">
+      <UniqueIdentifier>{e09f00f2-63ad-4edb-9fe3-0ed7c5932888}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="loaders">
+      <UniqueIdentifier>{b52f52e6-a63d-41ae-9051-b00f3db8cd04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="res\Textures">
+      <UniqueIdentifier>{3d819bff-6dc0-4611-b487-86ba64dd4c09}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Window.cpp">
+      <Filter>window</Filter>
+    </ClCompile>
+    <ClCompile Include="Events.cpp">
+      <Filter>window</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="voxel_engine.cpp" />
+    <ClCompile Include="png_loader.cpp">
+      <Filter>loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="voxel_engine.h" />
+    <ClInclude Include="Events.h">
+      <Filter>window</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>window</Filter>
+    </ClInclude>
+    <ClInclude Include="png_loader.h">
+      <Filter>loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Camera.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="main.glslv">
+      <Filter>res</Filter>
+    </None>
+    <None Include="main.glslf">
+      <Filter>res</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C:\Users\umato\Desktop\dark.png">
+      <Filter>res\Textures</Filter>
+    </Image>
+    <Image Include="C:\Users\umato\Desktop\test_texture.png">
+      <Filter>res\Textures</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="voxel_engine.rc">
+      <Filter>res</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

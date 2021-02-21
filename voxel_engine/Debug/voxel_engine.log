@@ -1,0 +1,19 @@
+﻿  Events.cpp
+D:\prjcts\voxel_engine\voxel_engine\Window.h(9,17): warning C4099: GLFWwindow: имя типа, ранее отображенное с помощью "struct", теперь отображено с помощью "class"
+D:\prjcts\voxel_engine\gllib\include\GLFW\glfw3.h(1157): message : см. объявление "GLFWwindow"
+D:\prjcts\voxel_engine\voxel_engine\Events.cpp(20,37): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+D:\prjcts\voxel_engine\voxel_engine\Events.cpp(21,37): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+D:\prjcts\voxel_engine\voxel_engine\Events.cpp(27,14): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\prjcts\voxel_engine\voxel_engine\Events.cpp(28,14): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  png_loader.cpp
+D:\prjcts\voxel_engine\voxel_engine\png_loader.cpp(4,10): fatal error C1083: Не удается открыть файл включение: libpng16/png.h: No such file or directory,
+  Shader.cpp
+D:\prjcts\voxel_engine\voxel_engine\Shader.cpp(51,33): warning C4101: e: неиспользованная локальная переменная
+  Texture.cpp
+  voxel_engine.cpp
+D:\prjcts\voxel_engine\voxel_engine\Window.h(9,17): warning C4099: GLFWwindow: имя типа, ранее отображенное с помощью "struct", теперь отображено с помощью "class"
+D:\prjcts\voxel_engine\gllib\include\GLFW\glfw3.h(1157): message : см. объявление "GLFWwindow"
+  Window.cpp
+D:\prjcts\voxel_engine\voxel_engine\Window.h(9,17): warning C4099: GLFWwindow: имя типа, ранее отображенное с помощью "struct", теперь отображено с помощью "class"
+D:\prjcts\voxel_engine\gllib\include\GLFW\glfw3.h(1157): message : см. объявление "GLFWwindow"
+  Создание кода...
