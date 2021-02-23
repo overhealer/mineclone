@@ -17,6 +17,9 @@
     <Filter Include="res\Textures">
       <UniqueIdentifier>{3d819bff-6dc0-4611-b487-86ba64dd4c09}</UniqueIdentifier>
     </Filter>
+    <Filter Include="voxel">
+      <UniqueIdentifier>{ad9ac1af-7c18-4fae-962e-4ef88c2948d8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Window.cpp">
@@ -35,7 +38,21 @@
     <ClCompile Include="png_loader.cpp">
       <Filter>loaders</Filter>
     </ClCompile>
-    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Camera.cpp">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="voxel.cpp">
+      <Filter>voxel</Filter>
+    </ClCompile>
+    <ClCompile Include="Chunk.cpp">
+      <Filter>voxel</Filter>
+    </ClCompile>
+    <ClCompile Include="VoxelRenderer.cpp">
+      <Filter>graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="voxel_engine.h" />
@@ -55,7 +72,21 @@
       <Filter>graphics</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
-    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Camera.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="voxel.h">
+      <Filter>voxel</Filter>
+    </ClInclude>
+    <ClInclude Include="Chunk.h">
+      <Filter>voxel</Filter>
+    </ClInclude>
+    <ClInclude Include="VoxelRenderer.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="main.glslv">

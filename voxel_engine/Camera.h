@@ -14,7 +14,6 @@ public:
 	float fov;
 	glm::vec3 position;
 	Camera(glm::vec3 position, float fov);
-	~Camera();
 
 	void rotate(float x, float y, float z);
 

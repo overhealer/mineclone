@@ -3,8 +3,9 @@
 int WIDTH = 480;
 int HEIGHT = 320;
 
-float vertices[] =
-{ // x     y     z     u     v
+float vertices[] = 
+{
+	// x    y     z     u     v
    -1.0f,-1.0f, 0.0f, 0.0f, 0.0f,
 	1.0f,-1.0f, 0.0f, 1.0f, 0.0f,
    -1.0f, 1.0f, 0.0f, 0.0f, 1.0f,
@@ -12,6 +13,10 @@ float vertices[] =
 	1.0f,-1.0f, 0.0f, 1.0f, 0.0f,
 	1.0f, 1.0f, 0.0f, 1.0f, 1.0f,
    -1.0f, 1.0f, 0.0f, 0.0f, 1.0f,
+};
+
+int attrs[] = {
+	3, 2, 0
 };
 
 int main()
@@ -27,7 +32,7 @@ int main()
 		return -1;
 	}
 
-	Texture* texture = load_texture("Textures/test_texture.png");
+	Texture* texture = load_texture("Textures/block.png");
 	if (texture == nullptr)
 	{
 		std::cerr << "failed to load texture" << std::endl;
@@ -36,26 +41,18 @@ int main()
 		return -1;
 	}
 
-	GLuint VAO, VBO;
-	glGenVertexArrays(1, &VAO);
-	glGenBuffers(1, &VBO);
-	glBindVertexArray(VAO);
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-	//position
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)(0 * sizeof(GLfloat)));
-	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(GLfloat), (GLvoid*)(3 * sizeof(GLfloat)));
-	glEnableVertexAttribArray(1);
-
-	glBindVertexArray(0);
+	VoxelRenderer renderer(1024*1024*8);
+	Chunk* chunk = new Chunk();
+	Mesh* mesh = renderer.render(chunk);
 
 	glClearColor(0.1, 0.1, 0.1, 1);
 
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_CULL_FACE);
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-	Camera* camera = new Camera(glm::vec3(0, 0, 1), glm::radians(90.0f));
+	Camera* camera = new Camera(glm::vec3(0, 0, 20), glm::radians(90.0f));
 
 	glm::mat4 model(1.0f);
 
@@ -88,7 +85,7 @@ int main()
 			Events::toggleCursor();
 		}
 
-		if (Events::justPressed(GLFW_MOUSE_BUTTON_1))
+		if (Events::justClicked(GLFW_MOUSE_BUTTON_1))
 		{
 			Window::setRandomScreenColor();
 		}
@@ -140,25 +137,24 @@ int main()
 		}
 
 
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		//Draw VAO
 		shader->use();
 		shader->uniformMatrix("model", model);
-		shader->uniformMatrix("proj_view", camera->getProjection()*camera->getView());
+		shader->uniformMatrix("projview", camera->getProjection()*camera->getView());
+		mesh->draw(GL_TRIANGLES);
 		texture->bind();
-		glBindVertexArray(VAO);
-		glDrawArrays(GL_TRIANGLES, 0, 6);
-		glBindVertexArray(0);
+		
 
 		Window::swapBuffers();
 		Events::pullEvents();
 	}
 
+	delete mesh;
 	delete texture;
 	delete shader;
-	glDeleteTextures(1, &VAO);
-	glDeleteBuffers(1, &VBO);
+	delete chunk;
 	Window::terminate();
 	return 0;
 }
