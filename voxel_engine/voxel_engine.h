@@ -7,6 +7,7 @@
 #include "png_loader.h"
 #include "voxel.h"
 #include "Chunk.h"
+#include "Chunks.h"
 #include "VoxelRenderer.h"
 
 #include <glm/glm.hpp>

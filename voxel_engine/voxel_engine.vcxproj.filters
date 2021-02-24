@@ -53,6 +53,7 @@
     <ClCompile Include="VoxelRenderer.cpp">
       <Filter>graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Chunks.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="voxel_engine.h" />
@@ -87,12 +88,19 @@
     <ClInclude Include="VoxelRenderer.h">
       <Filter>graphics</Filter>
     </ClInclude>
+    <ClInclude Include="Chunks.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="main.glslv">
       <Filter>res</Filter>
     </None>
     <None Include="main.glslf">
+      <Filter>res</Filter>
+    </None>
+    <None Include="crosshair.glslf">
+      <Filter>res</Filter>
+    </None>
+    <None Include="crosshair.glslv">
       <Filter>res</Filter>
     </None>
   </ItemGroup>
